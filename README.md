@@ -24,7 +24,7 @@ TFPは以下のような思想で作成しています。
 ```sh
 $ git clone https://github.com/cclefjp/tfptheme.git
 ```
-でクローンされた`tfptheme`ディレクトリをお使いのWordPressの`DocumentRoot/wp-content/themes/`にコピーしてください。
+でクローンされた内容から、`tfp`ディレクトリをお使いのWordPressの`DocumentRoot/wp-content/themes/`にコピーしてください。
 
 ### 手順2
 WordPressの管理画面で「外観」→「テーマ」からTheme for Programmerを有効化してください。
