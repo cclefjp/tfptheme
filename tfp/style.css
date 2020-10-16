@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 Theme Name: Theme for Programmer
 Theme URL: https://github.com/cclefjp/tfptheme/
@@ -13,3 +14,23 @@ License URI: https://github.com/cclefjp/tfptheme/blob/main/LICENSE
 * Thanks to Modern CSS Reset
 */
 @import url("https://github.com/hankchizljaw/modern-css-reset/blob/master/dist/reset.css");
+
+/* いったんbody全体の背景色を設定 */
+body {
+    background-color: gainsboro;
+}
+
+/* ヘッダー部分のスタイル */
+header {
+    background-color: aquamarine;
+}
+
+/* フッター部分のスタイル */
+footer {
+    background-color: darksalmon;
+}
+
+/* メインページ部分のスタイル */
+.page-inner {
+    background-color: gainsboro;
+}
