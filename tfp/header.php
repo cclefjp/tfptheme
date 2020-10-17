@@ -12,9 +12,12 @@
         <div class="container">
             <header id="header">
                 <div class="header-inner">
-                    <div class="logo">
-                        <a class="logo-header" href="<?php echo home_url(); ?>">
-                            <img src="<?php echo tfp_get_logoimg_uri(); ?>" alt="<?php bloginfo('name'); ?>">
+                    <div class="header-logo">
+                        <a class="logo-anker" href="<?php echo home_url(); ?>">
+                            <span class="title-logo">
+                                <img class="header-logo-img", src="<?php echo tfp_get_logoimg_uri(); ?>" alt="logo img">
+                                <?php bloginfo('name'); ?>
+                            </span>
                         </a>
                     </div> <!-- logo -->
                     <div class="header-navi">
