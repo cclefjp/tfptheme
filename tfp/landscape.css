@@ -1,0 +1,7 @@
+@charset "UTF-8";
+/* landscape.css - 横長画面用のスタイルシート */
+
+.title-logo {
+    font-size: 4vh;
+    color: black;
+}

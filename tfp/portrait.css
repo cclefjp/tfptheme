@@ -1,0 +1,7 @@
+@charset "UTF-8";
+/* portrait.css - 縦長画面用のスタイルシート */
+
+.title-logo {
+    font-size: 4vw;
+    color: black;
+}
