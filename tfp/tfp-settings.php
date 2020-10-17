@@ -20,7 +20,7 @@
  /* 設定ページ内のフィールドの作成 */
 add_action('admin_init', 'register_tfp_settings');
 function register_tfp_settings() {
-    $tfp_options = ['logo_img'];
+    $tfp_options = ['logo_img', 'copyright_statement'];
     foreach($tfp_options as $tfp_option) {
         register_setting('tfp_settings', 'tfp_' . $tfp_option);
     }
