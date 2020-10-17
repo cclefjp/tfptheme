@@ -17,7 +17,16 @@
             <?php echo get_site_url() . '/'; ?>
             </td>
             <td>
-            <input type="text" id="tfp_logo-img" class="regular-text" name="tfp_logo_img" value="<?= get_option('tfp_logo_img'); ?>">
+            <input type="text" id="tfp_logo_img" class="regular-text" name="tfp_logo_img" value="<?php echo get_option('tfp_logo_img'); ?>">
+            </td>
+            </tr>
+
+            <tr>
+            <th scope="row">
+                <label for="tfp_copyright_statement">著作権表示文章</label>
+            </th>
+            <td>
+            <input type="text" id="tfp_copyright_statement" class="regular-text" name="tfp_copyright_statement" value="<?php echo get_option('tfp_copyright_statement'); ?>">
             </td>
             </tr>
 
