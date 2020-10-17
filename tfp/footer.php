@@ -12,6 +12,7 @@
                         ?>
                         </nav>
                     </div><!-- footer-navi -->
+                    <div class="copyright"> &copy;<?php echo tfp_get_copyright_statement(); ?> </div>
                 </div><!-- footerContents -->
             </footer>
         </div> <!-- container -->
