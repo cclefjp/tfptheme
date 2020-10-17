@@ -15,14 +15,63 @@ License URI: https://github.com/cclefjp/tfptheme/blob/main/LICENSE
 */
 @import url("https://github.com/hankchizljaw/modern-css-reset/blob/master/dist/reset.css");
 
+/* 縦横比によって変化するスタイルの設定 */
+@import "landscape.css" (orientation: landscape);
+@import "portrait.css" (orientation: portrait);
+
 /* いったんbody全体の背景色を設定 */
 body {
     background-color: gainsboro;
 }
 
+/* ヘッダ、本文、フッタを含めたコンテナ部のスタイル */
+
+.container {
+    padding: 0 0;
+}
+
 /* ヘッダー部分のスタイル */
 header {
     background-color: aquamarine;
+    padding: 0 0;
+}
+
+.header-logo {
+    padding: 2vh 2vh;
+    height: 5vh;
+    z-index: 10;
+}
+
+.title-logo {
+    /* font-sizeはアスペクト比依存 */
+    padding: 0 0;
+    height: 5vh;
+    line-height: 1;
+}
+
+.header-logo-img {
+    height: 5vh;
+    line-height: 1;
+}
+
+.logo-anker {
+    text-decoration: none;
+}
+
+.header-navi {
+    text-align: right;
+}
+
+#menu-header > li {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-shrink: 2;
+}
+
+#menu-header a {
+    text-decoration: none;
+    color: black;
 }
 
 /* フッター部分のスタイル */
