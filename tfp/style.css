@@ -76,7 +76,18 @@ header {
 
 /* フッター部分のスタイル */
 footer {
-    background-color: darksalmon;
+    background-color: black;
+}
+
+#menu-footer > li {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#menu-footer a {
+    text-decoration: none;
+    color: whitesmoke;
 }
 
 /* メインページ部分のスタイル */
