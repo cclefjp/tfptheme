@@ -90,6 +90,11 @@ footer {
     color: whitesmoke;
 }
 
+.copyright {
+    text-align: center;
+    color: whitesmoke;
+}
+
 /* メインページ部分のスタイル */
 .page-inner {
     background-color: gainsboro;
