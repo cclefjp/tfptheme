@@ -37,3 +37,8 @@ function tfp_get_customposts( $post_type ) {
     $tfp_customposts = new WP_Query($args);
     return $tfp_customposts;
 }
+
+/* 著作権表示のための文章を得る */
+function tfp_get_copyright_statement() {
+    return get_option( 'tfp_copyright_statement' );
+}
