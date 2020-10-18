@@ -67,6 +67,7 @@ header {
     flex-direction: row;
     flex-wrap: wrap;
     flex-shrink: 2;
+    justify-content: space-evenly;
 }
 
 #menu-header a {
@@ -77,6 +78,7 @@ header {
 /* フッター部分のスタイル */
 footer {
     background-color: black;
+    z-index: 10;
 }
 
 #menu-footer > li {
@@ -93,6 +95,36 @@ footer {
 .copyright {
     text-align: center;
     color: whitesmoke;
+}
+
+.sns-link {
+    text-align: right;
+}
+
+.sns-link > li {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    z-index: 90;
+    text-align: right;
+}
+
+.twitter-anker {
+    height: 5vh;
+    width: 5vh;
+    background: url('assets/img/Twitter_Social_Icon_Rounded_Square_Color.png') no-repeat;
+    background-size: contain;
+    z-index: 100;
+    margin: 0.5vw;
+}
+
+.github-anker {
+    height: 5vh;
+    width: 5vh;
+    background: url('assets/img/GitHub-Mark-32px.jpg') no-repeat;
+    background-size: contain;
+    z-index: 100;
+    margin: 0.5vw;
 }
 
 /* メインページ部分のスタイル */
