@@ -121,6 +121,7 @@ footer {
 .github-anker {
     height: 5vh;
     width: 5vh;
+    border-radius: 3vh;
     background: url('assets/img/GitHub-Mark-32px.jpg') no-repeat;
     background-size: contain;
     z-index: 100;
