@@ -23,6 +23,30 @@
 
             <tr>
             <th scope="row">
+            <label for="tfp_twitter_account">フッターからリンクするTwitterアカウント</label>
+            </th>
+            <td>
+            @
+            </td>
+            <td>
+            <input type="text" id="tfp_twitter_account" class="regular-text" name="tfp_twitter_account" value="<?php echo get_option('tfp_twitter_account'); ?>">
+            </td>
+            </tr>
+
+            <tr>
+            <th scope="row">
+            <label for="tfp_github_account">フッターからリンクするGitHubアカウント</label>
+            </th>
+            <td>
+            https://github.com/
+            </td>
+            <td>
+            <input type="text" id="tfp_github_account" class="regular-text" name="tfp_github_account" value="<?php echo get_option('tfp_github_account'); ?>">
+            </td>
+            </tr>
+
+            <tr>
+            <th scope="row">
                 <label for="tfp_copyright_statement">著作権表示文章</label>
             </th>
             <td>

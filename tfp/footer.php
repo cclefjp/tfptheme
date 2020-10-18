@@ -12,6 +12,11 @@
                         ?>
                         </nav>
                     </div><!-- footer-navi -->
+                    <div class="sns-link">
+                        <ul class="sns-link">
+                            <?php echo tfp_get_sns_link(); ?>
+                        </ul>
+                    </div><!-- sns-link -->
                     <div class="copyright"> &copy;<?php echo tfp_get_copyright_statement(); ?> </div>
                 </div><!-- footerContents -->
             </footer>

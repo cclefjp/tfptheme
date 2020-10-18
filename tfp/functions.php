@@ -42,3 +42,26 @@ function tfp_get_customposts( $post_type ) {
 function tfp_get_copyright_statement() {
     return get_option( 'tfp_copyright_statement' );
 }
+
+/* フッター部のSNS linkコードを出力する。 */
+/* <li class="..."><a ...></li>の繰り返し */
+function tfp_get_sns_link() {
+    $statement = '';
+
+    /* twitter */
+    $twitter_account = get_option( 'tfp_twitter_account' );
+    if ( $twitter_account) {
+        $statement = $statement . '<li class="twitter"><a class="twitter-anker" href="https://twitter.com/';
+        $statement = $statement . $twitter_account . '"></a></li>';
+    }
+
+    /* github */
+    $github_account = get_option( 'tfp_github_account' );
+    if ( $github_account) {
+        $statement = $statement . '<li class="github">';
+        $statement = $statement . '<a class="github-anker" href="https://github.com/';
+        $statement = $statement . $github_account . '"></a></li>';
+    }
+
+    return $statement;
+}
