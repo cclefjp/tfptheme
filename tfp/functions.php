@@ -52,7 +52,7 @@ function tfp_get_sns_link() {
     $twitter_account = get_option( 'tfp_twitter_account' );
     if ( $twitter_account) {
         $statement = $statement . '<li class="twitter"><a class="twitter-anker" href="https://twitter.com/';
-        $statement = $statement . $twitter_account . '"></a></li>';
+        $statement = $statement . $twitter_account . '" target="_blank" rel="noopener noreferrer"></a></li>';
     }
 
     /* github */
@@ -60,8 +60,11 @@ function tfp_get_sns_link() {
     if ( $github_account) {
         $statement = $statement . '<li class="github">';
         $statement = $statement . '<a class="github-anker" href="https://github.com/';
-        $statement = $statement . $github_account . '"></a></li>';
+        $statement = $statement . $github_account . '" target="_blank" rel="noopener noreferrer"></a></li>';
     }
 
     return $statement;
 }
+
+/* アイキャッチ画像を使用可能にする */
+add_theme_support('post-thumbnails');
