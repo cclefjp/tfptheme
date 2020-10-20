@@ -14,7 +14,7 @@
                 <div class="header-inner">
                     <div class="header-logo">
                         <a class="logo-anker" href="<?php echo home_url(); ?>">
-                            <span class="title-logo">
+                            <span class="title-logo" style="color: <?php echo tfp_get_header_font_color(); ?>;">
                                 <img class="header-logo-img", src="<?php echo tfp_get_logoimg_uri(); ?>" alt="logo img">
                                 <?php bloginfo('name'); ?>
                             </span>
@@ -29,6 +29,9 @@
                         ); ?>
                         </nav>
                     </div> <!-- header-navi -->
+                    <div class="<?php echo tfp_get_title_class(); ?>" style="color: <?php echo tfp_get_header_font_color(); ?>;">
+                        <?php echo tfp_get_page_title(); ?>
+                    </div><!-- page-title -->
                 </div> <!-- header-inner -->
             </header>
 
