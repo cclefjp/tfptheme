@@ -1,7 +1,6 @@
 <!-- 個別の投稿ページの表示 -->
 <div class="postdetail">
     <time class="time"><?php the_time( 'Y.m.d' ); ?></time>
-    <p class='title'><?php the_title(); ?></p>
     <div class="post_body"><?php the_content(); ?></div>
 </div><!-- postdetail -->
 <div class="adjacent-posts">
