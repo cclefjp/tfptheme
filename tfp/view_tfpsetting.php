@@ -42,6 +42,29 @@
             </td>
             </tr>
 
+            tr>
+            <th scope="row">
+            <label for="tfp_webfonts">使用するWebフォントのリスト</label>
+            </th>
+            <td>
+            使用するWebフォントのURLを改行で区切って記載します。
+            </td>
+            <td>
+            <textarea class="regular-text" name="tfp_webfonts" id="tfp_webfonts" cols="30" rows="5">
+                <?php echo get_option('tfp_webfonts'); ?>    
+            </textarea>
+	        </td>
+            </tr>
+
+            <tr>
+            <th scope="row">
+            <label for="tfp_title_fontfamily">ページタイトルのフォントファミリー</label>
+            </th>
+            <td>
+            <input type="text" id="tfp_title_fontfamily" class="regular-text" name="tfp_title_fontfamily" value="<?php echo get_option('tfp_title_fontfamily'); ?>">
+            </td>
+            </tr>
+
             <tr>
             <th scope="row">
             <label for="tfp_twitter_account">フッターからリンクするTwitterアカウント</label>

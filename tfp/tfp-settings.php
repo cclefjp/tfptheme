@@ -23,6 +23,8 @@ function register_tfp_settings() {
     $tfp_options = ['logo_img',
                     'default_header_img',
                     'header_font_color',
+                    'webfonts',
+                    'title_fontfamily',
                     'copyright_statement',
                     'twitter_account',
                     'github_account'];
