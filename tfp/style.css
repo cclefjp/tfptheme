@@ -19,14 +19,24 @@ License URI: https://github.com/cclefjp/tfptheme/blob/main/LICENSE
 @import "landscape.css" (orientation: landscape);
 @import "portrait.css" (orientation: portrait);
 
-/* いったんbody全体の背景色を設定 */
+/* 文書全体の余白設定 */
+html {
+    border: 0 0;
+    padding: 0 0;
+}
+
+/* いったんbody全体の背景色と余白を設定 */
 body {
     background-color: gainsboro;
+    margin: 0 0;
+    border: 0 0;
+    padding: 0 0;
 }
 
 /* ヘッダ、本文、フッタを含めたコンテナ部のスタイル */
 
 .container {
+    border: 0 0;
     padding: 0 0;
 }
 
@@ -47,6 +57,10 @@ header {
     padding: 0 0;
     height: 5vh;
     line-height: 1;
+    /* ロゴ画像とテキストの上下中央揃え */
+    display: flex;
+    justify-content: left;
+    align-items: center;
 }
 
 .header-logo-img {
