@@ -100,3 +100,29 @@ function tfp_get_header_img_cssstyle( $css_option ) {
 
 /* アイキャッチ画像を使用可能にする */
 add_theme_support('post-thumbnails');
+
+/* ページタイトルを得る(ヘッダー部画像重ね表示用) */
+function tfp_get_page_title() {
+    echo '<!-- tfp_get_page_title -->';
+    if( is_front_page() ) {
+        echo '<!-- gpt_front -->';
+        return get_bloginfo( 'name' );
+    } else {
+        echo '<!-- gpt_not_front -->';
+        return get_the_title();
+    }
+}
+/* ヘッダ背景に重ねるロゴ、タイトル文字のフォント色を得る */
+function tfp_get_header_font_color() {
+    return get_option('tfp_header_font_color');
+}
+
+/* タイトルクラスを返す関数 */
+function tfp_get_title_class() {
+    if ( is_page() ) { /* 固定ページ */
+        return 'page-title';
+    }
+    elseif ( is_single() ) { /* 投稿ページ */
+        return 'post-title';
+    }
+}
