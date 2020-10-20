@@ -4,6 +4,7 @@
     <head>
         <meta charset="<?php bloginfo( 'charset' ); ?>">
         <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <?php echo tfp_include_webfonts(); ?>
         <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
         <title><?php get_the_title(); ?></title>
         <?php wp_head(); ?>
@@ -29,7 +30,10 @@
                         ); ?>
                         </nav>
                     </div> <!-- header-navi -->
-                    <div class="<?php echo tfp_get_title_class(); ?>" style="color: <?php echo tfp_get_header_font_color(); ?>;">
+                    <div class="<?php echo tfp_get_title_class(); ?>" style="
+                    color: <?php echo tfp_get_header_font_color(); ?>;
+                    font-family: <?php echo tfp_get_title_font_family(); ?>;
+                    ">
                         <?php echo tfp_get_page_title(); ?>
                     </div><!-- page-title -->
                 </div> <!-- header-inner -->
