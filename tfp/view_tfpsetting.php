@@ -23,6 +23,18 @@
 
             <tr>
             <th scope="row">
+            <label for="tfp_default_header_img">デフォルトのヘッダー背景画像</label>
+            </th>
+            <td>
+            <?php echo get_site_url() . '/'; ?>
+            </td>
+            <td>
+            <input type="text" id="tfp_default_header_img" class="regular-text" name="tfp_default_header_img" value="<?php echo get_option('tfp_default_header_img'); ?>">
+            </td>
+            </tr>
+
+            <tr>
+            <th scope="row">
             <label for="tfp_twitter_account">フッターからリンクするTwitterアカウント</label>
             </th>
             <td>
@@ -47,7 +59,7 @@
 
             <tr>
             <th scope="row">
-                <label for="tfp_copyright_statement">著作権表示文章</label>
+                <label for="tfp_copyright_statement">著作権表示</label>
             </th>
             <td>
             <input type="text" id="tfp_copyright_statement" class="regular-text" name="tfp_copyright_statement" value="<?php echo get_option('tfp_copyright_statement'); ?>">
