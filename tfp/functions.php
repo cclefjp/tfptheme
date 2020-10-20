@@ -66,5 +66,37 @@ function tfp_get_sns_link() {
     return $statement;
 }
 
+/* ヘッダー画像のURLを得る */
+function tfp_get_header_img() {
+
+    if ( has_post_thumbnail() ) {
+        $img_id = get_post_thumbnail_id();
+        $img_src = wp_get_attachment_image_src($img_id, 'full');
+
+        if ($img_src) {
+            return $img_src[0];
+        }
+    } else {
+        /* デフォルトのヘッダー画像 */
+        $img_src = get_option( 'tfp_default_header_img' );
+        if ( $img_src ) {
+            return get_site_url() . '/' . $img_src;
+        }
+    }
+    return '';
+}
+
+/* ヘッダー画像をCSSスタイルで返す url(...) */
+function tfp_get_header_img_cssstyle( $css_option ) {
+    $imgurl = tfp_get_header_img();
+    if ( $imgurl ) {
+        $imgcss = 'url(' . $imgurl . ') ' . $css_option . ';';
+        return $imgcss;
+    }
+    else {
+        return '';
+    }
+}
+
 /* アイキャッチ画像を使用可能にする */
 add_theme_support('post-thumbnails');
