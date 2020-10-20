@@ -112,7 +112,7 @@ header {
     flex-shrink: 2;
     text-align: left;
     padding: 2vh 4vw;
-    text-shadow: 0.5vh 0.5vw 1vh burlywood;
+    text-shadow: 0.5vh 0.5vw 1vh palegoldenrod;
 }
 
 /* フッター部分のスタイル */
@@ -171,4 +171,5 @@ footer {
 /* メインページ部分のスタイル */
 .page-inner {
     background-color: gainsboro;
+    padding: 2.5vh 5vw;
 }
