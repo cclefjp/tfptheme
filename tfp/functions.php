@@ -126,3 +126,28 @@ function tfp_get_title_class() {
         return 'post-title';
     }
 }
+
+/* 使用するWebフォントをインクルードするHTMLコードを返す */
+function tfp_include_webfonts() {
+    echo '<!-- tfp_include_webfonts -->';
+    $webfonts_src = get_option('tfp_webfonts');
+    $exploded = explode("\n", $webfonts_src);
+    $result = '';
+    foreach ( $exploded as $url) {
+        if ( $url ) {
+            $result = $result . '<link rel="stylesheet" href="' . $url . '">';
+        }
+    }
+    return $result;
+}
+
+/* ページタイトルの表示に使用するフォントファミリーを得る */
+function tfp_get_title_font_family() {
+    $family = get_option('tfp_title_fontfamily');
+    if ( $family ) {
+        return $family;
+    }
+    else {
+        return 'sans-serif';
+    }
+}
