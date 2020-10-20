@@ -10,7 +10,7 @@
     </head>
     <body <?php body_class(); ?>>
         <div class="container">
-            <header id="header">
+            <header id="header" style="background: <?php echo tfp_get_header_img_cssstyle( 'no-repeat' ); ?> background-size: cover;">
                 <div class="header-inner">
                     <div class="header-logo">
                         <a class="logo-anker" href="<?php echo home_url(); ?>">
