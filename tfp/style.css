@@ -89,6 +89,23 @@ header {
     color: black;
 }
 
+/* ページタイトルのスタイル */
+.page-title {
+    /* font-sizeはlandscape, portraitで指定 */
+    display: flex;
+    text-align: left;
+    padding: 2vh 4vw;
+}
+
+/* 投稿ページタイトルのスタイル */
+.post-title {
+    /* font-sizeはlandscape, portraitで指定 */
+    display: flex;
+    flex-shrink: 2;
+    text-align: left;
+    padding: 2vh 4vw;
+}
+
 /* フッター部分のスタイル */
 footer {
     background-color: black;
