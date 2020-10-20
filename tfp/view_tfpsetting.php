@@ -35,6 +35,15 @@
 
             <tr>
             <th scope="row">
+            <label for="tfp_header_font_color">ヘッダー部のロゴとページタイトルのフォント色</label>
+            </th>
+            <td>
+            <input type="text" id="tfp_header_font_color" class="regular-text" name="tfp_header_font_color" value="<?php echo get_option('tfp_header_font_color'); ?>">
+            </td>
+            </tr>
+
+            <tr>
+            <th scope="row">
             <label for="tfp_twitter_account">フッターからリンクするTwitterアカウント</label>
             </th>
             <td>
