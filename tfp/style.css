@@ -121,6 +121,10 @@ footer {
     z-index: 10;
 }
 
+.footer-navi {
+    padding: 1vh 1vw;
+}
+
 #menu-footer > li {
     display: flex;
     flex-direction: column;
@@ -135,10 +139,12 @@ footer {
 .copyright {
     text-align: center;
     color: whitesmoke;
+    padding: 0.5vh;
 }
 
 .sns-link {
     text-align: right;
+    padding: 0 1vw;
 }
 
 .sns-link > li {
@@ -172,4 +178,41 @@ footer {
 .page-inner {
     background-color: gainsboro;
     padding: 2.5vh 5vw;
+}
+
+/* 投稿のボックススタイル */
+.postLists {
+    display: flex;
+    flex-direction: column;
+}
+
+.post-body {
+    height: 20vh;
+    width: 60vw;
+    border: 1px solid black;
+    margin: 2vh;
+    padding: 1vh 1vw;
+    position: relative;
+}
+
+.post-link :hover {
+    box-shadow: 0 0.6vh 0.6vw 0.4vh midnightblue;
+    transform: translateY(0.2em);
+}
+
+.post-link {
+    color: black;
+    text-decoration: none;
+}
+
+.post-line {
+    font-size: 1.6em;
+    position: absolute;
+    bottom: 1vh;
+}
+
+/* ボックス内の要素はホバー効果を無効化する */
+.post-body :hover {
+    box-shadow: none;
+    transform: none;
 }
