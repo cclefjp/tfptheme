@@ -22,7 +22,7 @@ add_action('admin_init', 'register_tfp_settings');
 function register_tfp_settings() {
     $tfp_options = ['logo_img',
                     'default_header_img',
-                    'default_post_img',
+                    'default_post_background',
                     'header_font_color',
                     'webfonts',
                     'title_fontfamily',
