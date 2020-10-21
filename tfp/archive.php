@@ -10,7 +10,7 @@
     <div class="page-main" id="archive">
         <div class="main-container">
             <div class="main-wrapper">
-                <div class="postLists">
+                <ul class="postLists">
 
 <?php
     $tfp_posts = tfp_get_posts();
@@ -22,7 +22,7 @@
         wp_reset_postdata();
     endif;
 ?>
-                </div><!-- postLists -->
+                </ul><!-- postLists -->
 		        <div class="pager">
 		      	    <ul class="pagerList">
 <?php
@@ -30,7 +30,7 @@
         tfp_pagenavi();
     endif;
 ?>
-			        </ul>
+			        </ul><!-- pagerList -->
 		        </div><!-- pager -->
             </div><!-- main-wrapper -->
         </div><!-- main-container -->

@@ -181,9 +181,14 @@ footer {
 }
 
 /* 投稿のボックススタイル */
-.postLists {
+.postLists > li {
     display: flex;
     flex-direction: column;
+}
+
+.postLists :hover {
+    box-shadow: 0 0.6vh 0.6vw 0.4vh midnightblue;
+    transform: translateY(0.2em);
 }
 
 .post-body {
@@ -195,14 +200,20 @@ footer {
     position: relative;
 }
 
-.post-link :hover {
-    box-shadow: 0 0.6vh 0.6vw 0.4vh midnightblue;
-    transform: translateY(0.2em);
+.post-body :hover {
+    box-shadow: none;
+    transform: none;
 }
+
 
 .post-link {
     color: black;
     text-decoration: none;
+}
+
+.post-link :hover {
+    box-shadow: none;
+    transform: none;
 }
 
 .post-line {
@@ -211,8 +222,30 @@ footer {
     bottom: 1vh;
 }
 
-/* ボックス内の要素はホバー効果を無効化する */
-.post-body :hover {
+.post-line :hover {
     box-shadow: none;
     transform: none;
+}
+
+/* ボックス内の要素はホバー効果を無効化する */
+.link-container :hover {
+    box-shadow: none;
+    transform: none;
+}
+
+/* 投稿サムネイル */
+
+.post-thumbnail {
+    height: 10vh;
+    width: 10vh;
+    padding: 0 0;
+    margin: 0 0;
+}
+
+
+.post-thumbnail-img {
+    max-height: 100%;
+    width: auto;
+    padding: 0 0;
+    margin: 0 0;
 }

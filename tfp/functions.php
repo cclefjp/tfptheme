@@ -69,14 +69,12 @@ function tfp_get_sns_link() {
 /* ヘッダー画像のURLを得る */
 function tfp_get_header_img() {
 
-    if ( has_post_thumbnail() ) {
-        $img_id = get_post_thumbnail_id();
-        $img_src = wp_get_attachment_image_src($img_id, 'full');
-
-        if ($img_src) {
-            return $img_src[0];
-        }
-    } else {
+    /* 'header_img' というカスタムフィールドを検索 */
+    $header_img_url = get_post_meta(get_the_ID(), 'header_img', true);
+    if ( $header_img_url ) {
+        return $header_img_url;
+    }
+    else {
         /* デフォルトのヘッダー画像 */
         $img_src = get_option( 'tfp_default_header_img' );
         if ( $img_src ) {
@@ -152,22 +150,26 @@ function tfp_get_title_font_family() {
     }
 }
 
-/* 投稿のアイキャッチ画像を呼び出し、URLを返す。
+/* 投稿一覧用の背景画像を呼び出し、URLを返す。
 この関数はWordPressループ内で呼び出すこと */
 function tfp_get_post_background() {
 
+    $img_src = get_option( 'tfp_default_post_background');
+    if ( $img_src ) {
+        return get_site_url() . '/' . $img_src;
+    }
+};
+
+/* 投稿一覧用のサムネイル画像を呼び出し、<img>タグのHTMLコードを返す。
+この巻数はWordPressループ内で呼び出すこと */
+function tfp_get_post_thumbnail() {
     if ( has_post_thumbnail() ) {
         $img_id = get_post_thumbnail_id();
         $img_src = wp_get_attachment_image_src($img_id, 'full');
 
         if ($img_src) {
-            return $img_src[0];
-        }
-    } else {
-        /* デフォルトのサムネイル画像 */
-        $img_src = get_option( 'tfp_default_post_img' );
-        if ( $img_src ) {
-            return get_site_url() . '/' . $img_src;
+            $img_code = '<img class="post-thumbnail-img" src=' . $img_src[0] . '>';
+            return $img_code;
         }
     }
     return '';
