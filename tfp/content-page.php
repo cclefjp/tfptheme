@@ -2,4 +2,3 @@
 <div class="postdetail">
     <div class="post_body"><?php the_content(); ?></div>
 </div><!-- postdetail -->
-<div class="adjacent-posts">

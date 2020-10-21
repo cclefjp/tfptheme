@@ -35,6 +35,18 @@
 
             <tr>
             <th scope="row">
+            <label for="tfp_default_post_img">デフォルトの投稿サムネイル画像</label>
+            </th>
+            <td>
+            <?php echo get_site_url() . '/'; ?>
+            </td>
+            <td>
+            <input type="text" id="tfp_default_post_img" class="regular-text" name="tfp_default_post_img" value="<?php echo get_option('tfp_default_post_img'); ?>">
+            </td>
+            </tr>
+
+            <tr>
+            <th scope="row">
             <label for="tfp_header_font_color">ヘッダー部のロゴとページタイトルのフォント色</label>
             </th>
             <td>

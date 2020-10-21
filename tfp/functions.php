@@ -151,3 +151,24 @@ function tfp_get_title_font_family() {
         return 'sans-serif';
     }
 }
+
+/* 投稿のアイキャッチ画像を呼び出し、URLを返す。
+この関数はWordPressループ内で呼び出すこと */
+function tfp_get_post_background() {
+
+    if ( has_post_thumbnail() ) {
+        $img_id = get_post_thumbnail_id();
+        $img_src = wp_get_attachment_image_src($img_id, 'full');
+
+        if ($img_src) {
+            return $img_src[0];
+        }
+    } else {
+        /* デフォルトのサムネイル画像 */
+        $img_src = get_option( 'tfp_default_post_img' );
+        if ( $img_src ) {
+            return get_site_url() . '/' . $img_src;
+        }
+    }
+    return '';
+}
