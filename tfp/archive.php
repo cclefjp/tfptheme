@@ -24,13 +24,11 @@
 ?>
                 </ul><!-- postLists -->
 		        <div class="pager">
-		      	  <!--  <ul class="pagerList"> -->
 <?php
     if (function_exists( 'tfp_pagenavi' )):
         tfp_pagenavi( $the_query );
     endif;
 ?>
-			      <!--  </ul> --><!-- pagerList -->
 		        </div><!-- pager -->
             </div><!-- main-wrapper -->
         </div><!-- main-container -->
