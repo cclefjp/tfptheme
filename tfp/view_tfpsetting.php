@@ -54,7 +54,6 @@
             </td>
             </tr>
 
-            tr>
             <th scope="row">
             <label for="tfp_webfonts">使用するWebフォントのリスト</label>
             </th>
