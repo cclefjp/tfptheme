@@ -13,10 +13,10 @@
                 <ul class="postLists">
 
 <?php
-    $tfp_posts = tfp_get_posts();
-    if (  $tfp_posts->have_posts() ):
-        while ( $tfp_posts->have_posts() ):
-            $tfp_posts->the_post();
+    $the_query = tfp_get_posts();
+    if (  $the_query->have_posts() ):
+        while ( $the_query->have_posts() ):
+            $the_query->the_post();
             get_template_part( 'content-archive' );
         endwhile;
         wp_reset_postdata();
@@ -24,13 +24,13 @@
 ?>
                 </ul><!-- postLists -->
 		        <div class="pager">
-		      	    <ul class="pagerList">
+		      	  <!--  <ul class="pagerList"> -->
 <?php
     if (function_exists( 'tfp_pagenavi' )):
-        tfp_pagenavi();
+        tfp_pagenavi( $the_query );
     endif;
 ?>
-			        </ul><!-- pagerList -->
+			      <!--  </ul> --><!-- pagerList -->
 		        </div><!-- pager -->
             </div><!-- main-wrapper -->
         </div><!-- main-container -->

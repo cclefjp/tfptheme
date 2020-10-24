@@ -21,7 +21,7 @@ License URI: https://github.com/cclefjp/tfptheme/blob/main/LICENSE
 
 /* 文書全体の余白設定 */
 html {
-    border: 0 0;
+    border: none;
     padding: 0 0;
 }
 
@@ -29,14 +29,14 @@ html {
 body {
     background-color: gainsboro;
     margin: 0 0;
-    border: 0 0;
+    border: none;
     padding: 0 0;
 }
 
 /* ヘッダ、本文、フッタを含めたコンテナ部のスタイル */
 
 .container {
-    border: 0 0;
+    border: none;
     padding: 0 0;
 }
 
@@ -188,7 +188,7 @@ footer {
 
 .postLists :hover {
     box-shadow: 0 0.6vh 0.6vw 0.4vh midnightblue;
-    transform: translateY(0.2em);
+    transform: translateY(-0.2em);
 }
 
 .post-body {
@@ -248,4 +248,16 @@ footer {
     width: auto;
     padding: 0 0;
     margin: 0 0;
+}
+
+/* ページャーのスタイル */
+.pager {
+    text-align: center;
+}
+
+.page-numbers {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0.5vh 0.25vw;
 }
