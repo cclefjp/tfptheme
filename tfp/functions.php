@@ -20,19 +20,26 @@ function tfp_get_logoimg_uri() {
 
 /* 公開ブログ投稿一覧を得る */
 function tfp_get_posts() {
+    return tfp_get_customposts('post');
+    /*
+    $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
     $args = array (
         'post_type' => 'post',
-        'order' => 'DESC'
+        'order' => 'DESC',
+        'paged' => $paged
     );
     $tfp_posts = new WP_Query($args);
     return $tfp_posts;
+    */
 }
 
 /* カスタム投稿タイプの投稿一覧を得る */
 function tfp_get_customposts( $post_type ) {
+    $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
     $args = array (
         'post_type' => $post_type,
-        'order' => 'DESC'
+        'order' => 'DESC',
+        'paged' => $paged
     );
     $tfp_customposts = new WP_Query($args);
     return $tfp_customposts;
@@ -173,4 +180,23 @@ function tfp_get_post_thumbnail() {
         }
     }
     return '';
+}
+
+/* 記事一覧ページでページャーを出力する 
+the_queryを使用するため、この関数はWP_Queryを使用した
+文脈で使用すること */
+function tfp_pagenavi( $the_query ) {
+
+    echo '<!-- tfp_pagenavi -->';
+    $big = 999999999;
+
+    $param = array(
+	    'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+	    'format' => '/page/%#%',
+	    'current' => max( 1, get_query_var('paged') ),
+	    'total' => $the_query->max_num_pages
+    );
+
+    echo paginate_links( $param );
+
 }

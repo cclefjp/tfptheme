@@ -30,10 +30,10 @@ $customtype_name = 'hogehoge'
                 <div class="postLists">
 
 <?php
-    $tfp_custom_posts = tfp_get_customposts($customtype_name);
-    if (  $tfp_custom_posts->have_posts() ):
-        while ( $tfp_custom_posts->have_posts() ):
-            $tfp_custom_posts->the_post();
+    $the_query = tfp_get_customposts($customtype_name);
+    if (  $the_query->have_posts() ):
+        while ( $the_query->have_posts() ):
+            $the_query->the_post();
             get_template_part( 'content-archive' );
         endwhile;
         wp_reset_postdata();
@@ -41,13 +41,11 @@ $customtype_name = 'hogehoge'
 ?>
                 </div><!-- postLists -->
 		        <div class="pager">
-		      	    <ul class="pagerList">
 <?php
     if (function_exists( 'tfp_pagenavi' )):
-        tfp_pagenavi();
+        tfp_pagenavi( $the_query );
     endif;
 ?>
-			        </ul>
 		        </div><!-- pager -->
             </div><!-- main-wrapper -->
         </div><!-- main-container -->
