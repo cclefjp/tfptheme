@@ -15,10 +15,6 @@ License URI: https://github.com/cclefjp/tfptheme/blob/main/LICENSE
 */
 @import url("https://github.com/hankchizljaw/modern-css-reset/blob/master/dist/reset.css");
 
-/* 縦横比によって変化するスタイルの設定 */
-@import "landscape.css" (orientation: landscape);
-@import "portrait.css" (orientation: portrait);
-
 /* 文書全体の余白設定 */
 html {
     border: none;
@@ -72,6 +68,36 @@ header {
     text-decoration: none;
 }
 
+@media (orientation: landscape) {
+    .title-logo {
+        font-size: 4vh;
+        color: black;
+    }
+
+    .page-title {
+        font-size: 12vh;
+    }
+
+    .post-title {
+        font-size: 6vh;
+    }
+}
+
+@media (orientation: portrait) {
+    .title-logo {
+        font-size: 4vw;
+        color: black;
+    }
+    
+    .page-title {
+        font-size: 12vw;
+    }
+    
+    .post-title {
+        font-size: 6vw;
+    }
+}
+
 .header-navi {
     text-align: right;
 }
@@ -86,7 +112,7 @@ header {
 
 #menu-header a {
     text-decoration: none;
-    text-shadow: 0.125vh 0.125vw 0.25vh rosybrown;
+    text-shadow: 0.125vh 0.125vw 0.25vh palegoldenrod;
     color: black;
     margin: 0.5vh 0.5vw;
 }
@@ -180,6 +206,43 @@ footer {
     padding: 2.5vh 5vw;
 }
 
+.post-body {
+    padding: 2.5vh 5vw;
+    background: lemonchiffon;
+    color: black;
+}
+
+.post-container {
+    display: flex;
+    flex-direction: row;
+}
+
+@media screen and (orientation: landscape) {
+
+    .post-body {
+        width: 60%;
+    }
+
+    .toc-sidebar {
+        width: 30%;
+    }
+
+    .side-inner {
+        position: sticky;
+        top: 20vh;
+    }
+}
+
+@media screen and (orientation: portrait) {
+    .post-body {
+        width: 100%;
+    }
+
+    .toc-sidebar {
+        display: none;
+    }
+}
+
 /* 投稿のボックススタイル */
 .postLists > li {
     display: flex;
@@ -191,7 +254,7 @@ footer {
     transform: translateY(-0.2em);
 }
 
-.post-body {
+.post-box {
     height: 20vh;
     width: 60vw;
     border: 1px solid black;
@@ -200,7 +263,7 @@ footer {
     position: relative;
 }
 
-.post-body :hover {
+.post-box :hover {
     box-shadow: none;
     transform: none;
 }
@@ -265,13 +328,14 @@ footer {
 /* PREV, NEXTボタンのスタイル */
 .adjacent-posts {
     text-align: center;
+    margin: 2vh 0;
 }
 
 .adjacent-posts > a {
     display: inline-flex;
     flex-direction: row;
     justify-content: space-evenly;
-    background: khaki;
+    background: lemonchiffon;
     color: darkslategray;
     border: none;
     border-radius: 1vw 1vw;
@@ -279,3 +343,34 @@ footer {
 
     text-decoration: none;
 }
+
+/* パンくずナビのスタイル */
+.breadcrumb {
+    padding: 0.2vh 2.5vw;
+}
+
+/* サイドバーのスタイル */
+.side-inner {
+    background: lightcyan;
+    border: double medium darkblue;
+    border-radius: 1vw 1vw;
+
+    margin: 2.5% 2.5%;
+    padding: 1% 1%;
+
+}
+
+.sidebar-title {
+    text-align: center;
+}
+
+.widget-toc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.widget-toc a {
+    text-decoration: none;
+}
+

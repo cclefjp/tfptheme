@@ -1,7 +1,7 @@
 <!-- 投稿一覧ページ内での各投稿の表示を記載 -->
 
 
-  <li class="post-body" style="
+  <li class="post-box" style="
     background: url(<?php echo tfp_get_post_background(); ?>) repeat;
     ">
     <a class="post-link" href="<?php the_permalink(); ?>">
