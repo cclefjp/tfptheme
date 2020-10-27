@@ -9,6 +9,18 @@
     <table class="form-table">
         <tbody>
 
+					<tr>
+            <th scope="row">
+            	<label for="tfp_blogarchive_slug">ブログアーカイブページのslug</label>
+            </th>
+            <td>
+            (パンくずナビで使用します)
+            </td>
+            <td>
+            	<input type="text" id="tfp_blogarchive_slug" class="regular-text" name="tfp_blogarchive_slug" value="<?php echo get_option('tfp_blogarchive_slug'); ?>">
+            </td>
+          </tr>
+
             <tr>
             <th scope="row">
             <label for="tfp_logo_img">ロゴ画像</label>
