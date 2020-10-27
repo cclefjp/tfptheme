@@ -261,3 +261,21 @@ footer {
     justify-content: space-evenly;
     padding: 0.5vh 0.25vw;
 }
+
+/* PREV, NEXTボタンのスタイル */
+.adjacent-posts {
+    text-align: center;
+}
+
+.adjacent-posts > a {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background: khaki;
+    color: darkslategray;
+    border: none;
+    border-radius: 1vw 1vw;
+    padding: 1vh 0.5vw;
+
+    text-decoration: none;
+}
