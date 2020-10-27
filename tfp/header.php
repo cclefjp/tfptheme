@@ -38,4 +38,9 @@
                     </div><!-- page-title -->
                 </div> <!-- header-inner -->
             </header>
+            <?php if ( function_exists( tfp_breadcrumb )): ?>
+              <div class="breadcrumb">
+								<?php tfp_breadcrumb(); ?>
+							</div><!-- breadcrumb -->
+						<?php endif; ?>
 
