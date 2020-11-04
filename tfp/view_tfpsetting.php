@@ -47,13 +47,13 @@
 
             <tr>
             <th scope="row">
-            <label for="tfp_default_post_img">デフォルトの投稿サムネイル背景画像</label>
+            <label for="tfp_default_post_background">デフォルトの投稿サムネイル背景画像</label>
             </th>
             <td>
             <?php echo get_site_url() . '/'; ?>
             </td>
             <td>
-            <input type="text" id="tfp_default_post_background" class="regular-text" name="tfp_default_post_background" value="<?php echo get_option('tfp_default_post_backgound'); ?>">
+            <input type="text" id="tfp_default_post_background" class="regular-text" name="tfp_default_post_background" value="<?php echo get_option('tfp_default_post_background'); ?>">
             </td>
             </tr>
 
