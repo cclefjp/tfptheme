@@ -22,6 +22,8 @@ add_action('admin_init', 'register_tfp_settings');
 function register_tfp_settings() {
     $tfp_options = ['blogarchive_slug',
                     'logo_img',
+                    'logowidget_use_image',
+                    'logowidget_use_titletext',
                     'default_header_img',
                     'default_post_background',
                     'header_font_color',
