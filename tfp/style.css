@@ -47,7 +47,7 @@ header {
     padding: 0 0;
 }
 
-.header-logo {
+.site-logo {
     padding: 2vh 2vh;
     height: 5vh;
     z-index: 10;
@@ -64,7 +64,7 @@ header {
     align-items: center;
 }
 
-.header-logo-img {
+.logo-img {
     height: 5vh;
     line-height: 1;
 }
