@@ -13,14 +13,7 @@
         <div class="container">
             <header id="header" style="background: <?php echo tfp_get_header_img_cssstyle( 'no-repeat' ); ?> background-size: cover;">
                 <div class="header-inner">
-                    <div class="header-logo">
-                        <a class="logo-anker" href="<?php echo home_url(); ?>">
-                            <span class="title-logo" style="color: <?php echo tfp_get_header_font_color(); ?>;">
-                                <img class="header-logo-img", src="<?php echo tfp_get_logoimg_uri(); ?>" alt="logo img">
-                                <?php bloginfo('name'); ?>
-                            </span>
-                        </a>
-                    </div> <!-- logo -->
+                    <?php the_widget('TFP_LogoWidget'); ?>
                     <div class="header-navi">
                         <nav class="header-navi">
                         <?php wp_nav_menu(
@@ -39,7 +32,7 @@
                 </div> <!-- header-inner -->
             </header>
             <div class="page-body">
-            	<?php if ( function_exists( tfp_breadcrumb )): ?>
+            	<?php if ( function_exists( 'tfp_breadcrumb' )): ?>
               	<div class="breadcrumb">
 									<?php tfp_breadcrumb(); ?>
 								</div><!-- breadcrumb -->
