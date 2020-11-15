@@ -35,6 +35,30 @@
 
             <tr>
             <th scope="row">
+            <label for="tfp_logowidget_use_image">ロゴウィジェットでの画像表示</label>
+            </th>
+            <td>
+            <input type="radio" id="tfp_logowidget_use_image" name="tfp_logowidget_use_image" value="true"
+            <?php if( get_option( 'tfp_logowidget_use_image') == 'true') { echo 'checked="checked"'; } ?>>する
+            <input type="radio" id="tfp_logowidget_use_image" name="tfp_logowidget_use_image" value="false"
+            <?php if( get_option( 'tfp_logowidget_use_image') == 'false') { echo 'checked="checked"'; } ?>>しない
+            </td>
+            </tr>
+
+            <tr>
+            <th scope="row">
+            <label for="tfp_logowidget_use_titletext">ロゴウィジェットでのサイト名テキスト表示</label>
+            </th>
+            <td>
+            <input type="radio" id="tfp_logowidget_use_titletext" name="tfp_logowidget_use_titletext" value="true"
+            <?php if( get_option( 'tfp_logowidget_use_titletext') == 'true') { echo 'checked="checked"'; } ?>>する
+            <input type="radio" id="tfp_logowidget_use_titletext" name="tfp_logowidget_use_titletext" value="false"
+            <?php if( get_option( 'tfp_logowidget_use_titletext') == 'false') { echo 'checked="checked"'; } ?>>しない
+            </td>
+            </tr>
+
+            <tr>
+            <th scope="row">
             <label for="tfp_default_header_img">デフォルトのヘッダー背景画像</label>
             </th>
             <td>
@@ -47,13 +71,13 @@
 
             <tr>
             <th scope="row">
-            <label for="tfp_default_post_img">デフォルトの投稿サムネイル背景画像</label>
+            <label for="tfp_default_post_background">デフォルトの投稿サムネイル背景画像</label>
             </th>
             <td>
             <?php echo get_site_url() . '/'; ?>
             </td>
             <td>
-            <input type="text" id="tfp_default_post_background" class="regular-text" name="tfp_default_post_background" value="<?php echo get_option('tfp_default_post_backgound'); ?>">
+            <input type="text" id="tfp_default_post_background" class="regular-text" name="tfp_default_post_background" value="<?php echo get_option('tfp_default_post_background'); ?>">
             </td>
             </tr>
 

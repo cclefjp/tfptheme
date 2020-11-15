@@ -4,7 +4,7 @@ Theme Name: Theme for Programmer
 Theme URL: https://github.com/cclefjp/tfptheme/
 Description: プログラマのためのシンプルなWordPressテーマ
 Author: cclef
-Version: 0.1
+Version: 0.3
 Tags: simple, programmable
 License: Apache License 2.0
 License URI: https://github.com/cclefjp/tfptheme/blob/main/LICENSE
@@ -36,13 +36,18 @@ body {
     padding: 0 0;
 }
 
+/* imgタグで挿入される画像の縦横比を保持する */
+.main-container img {
+    object-fit: contain;
+}
+
 /* ヘッダー部分のスタイル */
 header {
     background-color: aquamarine;
     padding: 0 0;
 }
 
-.header-logo {
+.site-logo {
     padding: 2vh 2vh;
     height: 5vh;
     z-index: 10;
@@ -59,7 +64,7 @@ header {
     align-items: center;
 }
 
-.header-logo-img {
+.logo-img {
     height: 5vh;
     line-height: 1;
 }
@@ -201,15 +206,18 @@ footer {
 }
 
 /* メインページ部分のスタイル */
+.page-body {
+    background-color: #e7e7eb;
+}
+
 .page-inner {
-    background-color: gainsboro;
     padding: 2.5vh 5vw;
 }
 
 .post-body {
     padding: 2.5vh 5vw;
-    background: lemonchiffon;
-    color: black;
+    background: #ebf6f7;
+    color: #302833;
 }
 
 .post-container {
@@ -225,6 +233,7 @@ footer {
 
     .toc-sidebar {
         width: 30%;
+        margin: 1vh 2.5vw;
     }
 
     .side-inner {
@@ -351,7 +360,7 @@ footer {
 
 /* サイドバーのスタイル */
 .side-inner {
-    background: lightcyan;
+    background: #ebf6f7;
     border: double medium darkblue;
     border-radius: 1vw 1vw;
 
@@ -360,7 +369,7 @@ footer {
 
 }
 
-.sidebar-title {
+.sidebar_title {
     text-align: center;
 }
 
@@ -374,3 +383,14 @@ footer {
     text-decoration: none;
 }
 
+.widget-toc h4 {
+    margin: 1.0vh;
+}
+
+.widget-toc h5 {
+    margin: 0.5vh 1vw;
+}
+
+.widget-toc h6 {
+    margin: 0.25vh 2vw;
+}

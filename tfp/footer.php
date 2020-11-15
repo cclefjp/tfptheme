@@ -1,4 +1,5 @@
 <!-- すべてのページのフッタ部分を記載 -->
+        </div><!-- page-body -->
             <footer class="footer" id="footer">
                 <div class="footerContents">
                     <div class="footer-navi">

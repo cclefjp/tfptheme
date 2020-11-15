@@ -225,7 +225,9 @@ function tfp_breadcrumb() {
 
         }
         
-        $parent_post = $parent_post->post_parent;
+        if ( $parent_post ) {
+            $parent_post = $parent_post->post_parent;
+        }
         $parent_title = get_the_title($parent_post);
         if ( ! $parent_post ) {
             break;
@@ -311,7 +313,7 @@ class TFP_TOCWidget extends WP_Widget {
 	/**
 	 * 表側の Widget を出力する
 	 *
-	 * @param array $args      'register_sidebar'で設定した「before_title, after_title, before_widget, after_widget」が入る
+	 * @param array $args      'register_toc_sidebar'で設定した「before_title, after_title, before_widget, after_widget」が入る
 	 * @param array $instance  Widgetの設定項目
 	 */
 	public function widget( $args, $instance ) {
@@ -399,3 +401,6 @@ function tfp_register_toc_sidebar() {
 }
 
 add_action( 'widgets_init', 'tfp_register_toc_sidebar');
+
+// サイトロゴウィジェットのコード
+include_once('functions_logowidget.php');
