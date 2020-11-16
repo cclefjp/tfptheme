@@ -66,6 +66,7 @@ header {
 
 .logo-img {
     height: 5vh;
+    width: auto;
     line-height: 1;
 }
 

@@ -33,14 +33,10 @@ class TFP_LogoWidget extends WP_Widget {
             $use_text = get_option('tfp_logowidget_use_titletext');
         }
         ?>
-        <div class="site-logo">;
-        <a class="logo-anker" href=";
-        <?php home_url(); ?>
-        ">;
-        <?php
-        echo '<span class="title-logo" style="color: ';
-        echo tfp_get_header_font_color();
-        echo '">';
+        <div class="site-logo">
+        <?php echo '<a class="logo-anker" href="' . home_url() . '">"';
+        echo '<span class="title-logo" style="color: '. tfp_get_header_font_color() . '">';
+
         if ($use_img == 'true') {
             echo '<img class="logo-img", src="';
             echo tfp_get_logoimg_uri();
