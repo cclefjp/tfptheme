@@ -34,7 +34,7 @@ class TFP_LogoWidget extends WP_Widget {
         }
         ?>
         <div class="site-logo">
-        <?php echo '<a class="logo-anker" href="' . home_url() . '">"';
+        <?php echo '<a class="logo-anker" href="' . home_url() . '">';
         echo '<span class="title-logo" style="color: '. tfp_get_header_font_color() . '">';
 
         if ($use_img == 'true') {
