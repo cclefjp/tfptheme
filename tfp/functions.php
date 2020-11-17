@@ -414,3 +414,6 @@ add_action( 'widgets_init', 'tfp_register_toc_sidebar');
 
 // サイトロゴウィジェットのコード
 include_once('functions_logowidget.php');
+
+// 検索フォームにHTML5マークアップのサポートを追加
+add_theme_support('html5', array('search-form'));
