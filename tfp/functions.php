@@ -112,7 +112,10 @@ function tfp_get_page_title() {
     if( is_front_page() ) {
         echo '<!-- gpt_front -->';
         return get_bloginfo( 'name' );
-    } else {
+    } else if (is_404() ) {
+        echo '<!-- gpt_404 -->';
+        return '404 Not Found';
+    }else {
         echo '<!-- gpt_not_front -->';
         return get_the_title();
     }
@@ -129,6 +132,9 @@ function tfp_get_title_class() {
     }
     elseif ( is_single() ) { /* 投稿ページ */
         return 'post-title';
+    }
+    elseif (is_404() ) { /* 404 */
+        return 'page-title';
     }
 }
 
@@ -201,6 +207,10 @@ function tfp_pagenavi( $the_query ) {
 
 /* パンくずナビを出力する */
 function tfp_breadcrumb() {
+    /* 404 not foundの場合は出力しない */
+    if ( is_404() ) {
+        return;
+    }
     $post = get_post( get_the_ID() );
 
     $parent_post = $post->post_parent;
