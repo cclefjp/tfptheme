@@ -115,7 +115,10 @@ function tfp_get_page_title() {
     } else if (is_404() ) {
         echo '<!-- gpt_404 -->';
         return '404 Not Found';
-    }else {
+    } else if (is_search()) {
+        return '検索結果';
+    } 
+    else {
         echo '<!-- gpt_not_front -->';
         return get_the_title();
     }
@@ -133,7 +136,7 @@ function tfp_get_title_class() {
     elseif ( is_single() ) { /* 投稿ページ */
         return 'post-title';
     }
-    elseif (is_404() ) { /* 404 */
+    else { /* デフォルトはpage-title */
         return 'page-title';
     }
 }
@@ -173,6 +176,15 @@ function tfp_get_post_background() {
     }
 };
 
+/* 検索結果一覧用の背景画像を呼び出し、URLを返す。
+この関数はWordPressループ内で呼び出すこと */
+function tfp_get_searchresult_background() {
+    $img_src = get_option( 'tfp_default_searchresult_background');
+    if ( $img_src ) {
+        return get_site_url() . '/' . $img_src;
+    }
+}
+
 /* 投稿一覧用のサムネイル画像を呼び出し、<img>タグのHTMLコードを返す。
 この巻数はWordPressループ内で呼び出すこと */
 function tfp_get_post_thumbnail() {
@@ -208,7 +220,7 @@ function tfp_pagenavi( $the_query ) {
 /* パンくずナビを出力する */
 function tfp_breadcrumb() {
     /* 404 not foundの場合は出力しない */
-    if ( is_404() ) {
+    if ( is_404() || is_search() ) {
         return;
     }
     $post = get_post( get_the_ID() );
