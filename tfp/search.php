@@ -1,12 +1,14 @@
 <?php get_header(); ?>
 <div class="page-inner">
   <div class="page-main" id="pg-search">
+		<?php get_search_form( true ); /*
     <form class="search-form" role="search" method="get" action="<?php echo esc_url( home_url() ); ?>">
       <div class="search-box">
         <input type="text" name="s" class="search-input" placeholder="キーワードを入力してください" value="<?php the_search_query(); ?>" />
         <button type="submit" class="button button-submit">検索</button>
-      </div><!-- search-box -->
-    </form>
+			</div><!-- search-box -->
+		</form>
+		*/ ?>
     <div class="searchResult-wrapper">
 			<?php if ( get_search_query() ): ?>		    
       <div class="searchResult-head">
@@ -14,32 +16,12 @@
           <div class="total">全<?php echo $wp_query->found_posts; ?>件</div>
       </div><!-- searchResult-head -->
 			<?php endif; ?>		    
-    	<ul class="searchResultLlist">
+    	<ul class="postLists">
 			<?php		      
  				if ( have_posts() && get_search_query() ) :
  				while ( have_posts() ) : the_post();
-			?>	      
-        <li class="searchResultLlist-item">
-        <a href="<?php the_permalink(); ?>">
-        <div class="item-wrapper">
-          <div class="image">
-						<?php 
-							$image = get_the_post_thumbnail( $post->ID, 'search' );
-							if ( $image ):
-								echo $image;
-							else:
-								echo '<img src="'. get_template_directory_uri(). '/assets/images/img-noImage.png" />';
-							endif;
-						?>
-    			</div><!-- image -->
-    			<dl>
-      			<dt><?php the_title(); ?></dt>
-      			<dd class="description"><?php echo get_the_excerpt(); ?></dd>
-    			</dl>
-  			</div><!-- item-wrapper -->
-        </a>
-        </li>
-				<?php endwhile; ?>		      
+				      get_template_part('content-search');
+				endwhile; ?>		      
       </ul>
       <div class="pager">
         <ul class="pagerList">
