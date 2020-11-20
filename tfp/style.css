@@ -4,7 +4,7 @@ Theme Name: Theme for Programmer
 Theme URL: https://github.com/cclefjp/tfptheme/
 Description: プログラマのためのシンプルなWordPressテーマ
 Author: cclef
-Version: 0.4
+Version: 0.5
 Tags: simple, programmable
 License: Apache License 2.0
 License URI: https://github.com/cclefjp/tfptheme/blob/main/LICENSE
@@ -102,6 +102,11 @@ header {
     .post-title {
         font-size: 6vw;
     }
+}
+
+/* ヘッダ部検索ボックスのスタイル */
+.header-searchbox {
+    text-align: right;
 }
 
 .header-navi {
@@ -305,11 +310,36 @@ footer {
     transform: none;
 }
 
+.searchresult-box {
+    margin: 2vh;
+}
+
 /* ボックス内の要素はホバー効果を無効化する */
 .link-container :hover {
     box-shadow: none;
     transform: none;
 }
+
+.searchresult-box :hover {
+    box-shadow: none;
+    transform: none;
+}
+
+.searchresult-link :hover {
+    box-shadow: none;
+    transform: none;
+}
+
+.post-thumbnail :hover {
+    box-shadow: none;
+    transform: none;
+}
+
+.description :hover {
+    box-shadow: none;
+    transform: none;
+}
+
 
 /* 投稿サムネイル */
 

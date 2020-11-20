@@ -26,6 +26,7 @@ function register_tfp_settings() {
                     'logowidget_use_titletext',
                     'default_header_img',
                     'default_post_background',
+                    'default_searchresult_background',
                     'header_font_color',
                     'webfonts',
                     'title_fontfamily',

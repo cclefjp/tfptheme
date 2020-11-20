@@ -83,6 +83,18 @@
 
             <tr>
             <th scope="row">
+            <label for="tfp_default_searchresult_background">デフォルトの検索結果サムネイル背景画像</label>
+            </th>
+            <td>
+            <?php echo get_site_url() . '/'; ?>
+            </td>
+            <td>
+            <input type="text" id="tfp_default_searchresult_background" class="regular-text" name="tfp_default_searchresult_background" value="<?php echo get_option('tfp_default_searchresult_background'); ?>">
+            </td>
+            </tr>
+
+            <tr>
+            <th scope="row">
             <label for="tfp_header_font_color">ヘッダー部のロゴとページタイトルのフォント色</label>
             </th>
             <td>

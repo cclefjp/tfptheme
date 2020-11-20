@@ -14,6 +14,9 @@
             <header id="header" style="background: <?php echo tfp_get_header_img_cssstyle( 'no-repeat' ); ?> background-size: cover;">
                 <div class="header-inner">
                     <?php the_widget('TFP_LogoWidget'); ?>
+                    <div class="header-searchbox">
+                        <?php get_search_form(true); ?>
+                    </div>
                     <div class="header-navi">
                         <nav class="header-navi">
                         <?php wp_nav_menu(
